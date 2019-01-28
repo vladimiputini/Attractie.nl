@@ -6,20 +6,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logoLocation"
-        android:layout_width="112dp"
-        android:layout_height="142dp"
-        android:layout_alignParentStart="true"
+    <TextView
+        android:id="@+id/pretpark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="17dp"
-        android:contentDescription="@string/logoLocation" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="214dp"
+        android:layout_weight="1"
+        android:text="Pretpark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/stad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pretpark"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="155dp"
+        android:text="Stad"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="128dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logoLocation"
+            android:layout_width="66dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="17dp"
+            android:contentDescription="@string/logoLocation" />
 
         <TextView
             android:id="@+id/NaamPark"
@@ -27,6 +51,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/NaamPark" />
+
+        <TextView
+            android:id="@+id/Plaats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/Plaats" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="locatie" />
     </LinearLayout>
 
 </RelativeLayout>

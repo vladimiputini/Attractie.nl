@@ -1,7 +1,10 @@
 package com.example.mac.attractie_nl;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -19,16 +22,36 @@ public class MainActivity extends AppCompatActivity {
     String Json;
     String logoLocation;
     String NaamPark;
+    String Plaats;
+    String Lat;
+    String Lng;
+    Button buton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView gridView = (ListView) findViewById(R.id.gridview);
+        ListView gridView;
+        gridView = (ListView) findViewById(R.id.gridview);
 
         imageAdapter = new ImageAdapter(this, R.layout.row_layout);
         gridView.setAdapter(imageAdapter);
+
+        Button button = findViewById(R.id.button);
+try {
+
+    button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Goaway(view);
+
+        }
+    });
+
+}catch (Exception e){
+    e.getMessage();
+        }
 
         //parsing json
         try {
@@ -46,9 +69,12 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject obj = jsonArray.getJSONObject(i);
 
                 NaamPark = obj.getString("NaamPark");
+                Plaats = obj.getString("Plaats");
+                Lat = obj.getString("Lat");
+                Lng = obj.getString("Lng");
                 logoLocation = obj.getString("Img");
 
-                Images images = new Images(NaamPark, logoLocation);
+                Images images = new Images(NaamPark,Plaats,Lat,Lng,logoLocation);
                 imageAdapter.add(images);
             }
         } catch (IOException e) {
@@ -58,5 +84,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    public void Goaway(View view){
+
+
+        Intent intent;
+        intent = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(intent);
+
     }
+
+}
 

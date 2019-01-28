@@ -3,6 +3,8 @@ package com.example.mac.attractie_nl;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -52,6 +54,7 @@ public class ImageAdapter extends ArrayAdapter {
         int counter = 0;
         Drawable[] drawables = new Drawable[0];
         String[] fotos;
+        Bitmap bitmap = null;
 
         View row;
         row = convertView;
@@ -63,6 +66,7 @@ public class ImageAdapter extends ArrayAdapter {
             imageHolder = new ImageHolder();
 
             imageHolder.NaamPark = (TextView) row.findViewById(R.id.NaamPark);
+            imageHolder.Plaats = (TextView) row.findViewById(R.id.Plaats);
             imageHolder.logoLocation = (ImageView) row.findViewById(logoLocation);
             row.setTag(imageHolder);
 
@@ -72,23 +76,33 @@ public class ImageAdapter extends ArrayAdapter {
 
             Images images = (Images) this.getItem(position);
 
-            imageHolder.NaamPark.setText(images.getNaam());
+        if (images != null) {
+            imageHolder.NaamPark.setText(images.getNaamPark());
+        }
+        if (images != null) {
+            imageHolder.Plaats.setText(images.getPlaats());
+        }
 
-            try {
-                AssetManager assetManager = getContext().getAssets();
-                fotos = assetManager.list("imagination");
+        try {
+            AssetManager assetManager = getContext().getAssets();
+            fotos = assetManager.list("imagination");
 
-                    drawables = new Drawable[fotos.length];
+            Bitmap[] bitmapL;
+            bitmapL = new Bitmap[fotos.length];
 
-                    for (int i = 0; i < fotos.length; i++) {
-                        inputStream = getContext().getAssets().open("imagination/" + fotos[i]);
+//            Drawable drawable = null;
+            for (int i = 0; i < fotos.length; i++) {
+                inputStream = getContext().getAssets().open("imagination/" + fotos[i]);
 //                        Log.d(TAG, fotos[i]);
-                        Drawable drawable = Drawable.createFromStream(inputStream, null);
-                        drawables[i] = drawable;
-                        imageHolder.logoLocation.setImageDrawable(drawables[i]);
-                }
+                bitmap = BitmapFactory.decodeStream(inputStream);
+                bitmapL[i] = bitmap;
 
-            } catch (IOException e) {
+                imageHolder.logoLocation.setImageBitmap(bitmapL[i]);
+            }
+
+
+
+        } catch (IOException e) {
                 e.printStackTrace();
             }
 
@@ -98,10 +112,11 @@ public class ImageAdapter extends ArrayAdapter {
 
 
 
-
     static class ImageHolder{
+        TextView Plaats;
         TextView NaamPark;
         ImageView logoLocation;
+
     }
 
 
