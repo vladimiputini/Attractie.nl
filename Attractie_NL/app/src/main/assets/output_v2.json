@@ -1,0 +1,82 @@
+[
+  {
+    "Nr": 1,
+    "NaamPark": "De Efteling",
+    "Plaats": "Kaatsheuvel",
+    "Lat": "5,04604",
+    "Lng": "51,64683",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/efteling.jpg"
+  },
+  {
+    "Nr": 2,
+    "NaamPark": "Slagharen",
+    "Plaats": "Slagharen",
+    "Lat": "6,56433",
+    "Lng": "52,61951",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/slagharen.jpg"
+  },
+  {
+    "Nr": 3,
+    "NaamPark": "Drunense Duinen",
+    "Plaats": "Drunen",
+    "Lat": "5,12032",
+    "Lng": "51,64651",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/drunenseduinen.jpg"
+  },
+  {
+    "Nr": 4,
+    "NaamPark": "Drievliet",
+    "Plaats": "Den Haag",
+    "Lat": "4,35419",
+    "Lng": "52,05493",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/drievliet.jpg"
+  },
+  {
+    "Nr": 5,
+    "NaamPark": "Duinrell",
+    "Plaats": "Wassenaar",
+    "Lat": "4,38543",
+    "Lng": "52,14865",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/duinrell.jpg"
+  },
+  {
+    "Nr": 6,
+    "NaamPark": "Julianatoren",
+    "Plaats": "Apeldoorn",
+    "Lat": "5,89718",
+    "Lng": "52,18120",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/julianatoren.jpg"
+  },
+  {
+    "Nr": 7,
+    "NaamPark": "Dolfinarium",
+    "Plaats": "Harderwijk",
+    "Lat": "5,61807",
+    "Lng": "52,35369",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/dolfinarium.jpg"
+  },
+  {
+    "Nr": 8,
+    "NaamPark": "Walibi",
+    "Plaats": "Biddinghuizen",
+    "Lat": "5,68212",
+    "Lng": "52,44754",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/walibi.jpg"
+  },
+  {
+    "Nr": 9,
+    "NaamPark": "Beeksebergen",
+    "Plaats": "Hilvarenbeek",
+    "Lat": "5,13042",
+    "Lng": "51,52050",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/beeksebergen.jpg"
+  },
+  {
+    "Nr": 10,
+    "NaamPark": "Plopsaland",
+    "Plaats": "De Panne",
+    "Lat": "2,59681",
+    "Lng": "51,08091",
+    "Img": "/Users/mac/Documents/school/ExamenAndroid_attractie/Attractie.nl/Attractie_NL/app/src/main/Assets/img/depanne.jpg"
+  }
+]
